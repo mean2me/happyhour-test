@@ -1,4 +1,4 @@
-export declare enum ActionType {
+export enum ActionType {
   // gameGroupList,
   GET_LOBBY_LIST_WITH_GAME_GROUPS_REQUEST,
   GET_LOBBY_LIST_WITH_GAME_GROUPS_SUCCESS,

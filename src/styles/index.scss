@@ -1,0 +1,52 @@
+@import 'colors.scss';
+@import 'reset.scss';
+@import 'fonts.scss';
+@import 'buttons.scss';
+
+.main {
+  display: flex;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: row;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 188px;
+  background-image: linear-gradient(
+    182.91deg,
+    $grad-0 0px,
+    $grad-1 24.48%,
+    $grad-2 50%,
+    $grad-3 72.83%,
+    $grad-4 95.83%
+  );
+
+  .logo-container {
+    margin: 1rem 1rem 3rem 1rem;
+  }
+
+  div {
+    display: flex;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.body {
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: $light-grey;
+}

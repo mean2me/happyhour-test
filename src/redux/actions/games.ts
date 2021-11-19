@@ -1,4 +1,5 @@
-import { ActionType, IAction, IGame, ILobby } from '../../typings'
+///  <reference path="../../types.ts" />
+import { ActionType, IAction, IGame, ILobby } from '../../types'
 
 namespace Actions {
   export const getLobbyListWithGameGroups = (): IAction => {

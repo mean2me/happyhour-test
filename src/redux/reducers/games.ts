@@ -1,4 +1,4 @@
-import { ActionType, IAction, IGamesState } from '../../typings'
+import { ActionType, IAction, IGamesState } from '../../types'
 
 const initialState: IGamesState = {
   loading: false,

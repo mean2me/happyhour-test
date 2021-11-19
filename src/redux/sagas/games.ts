@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios'
 import { all, put, call, takeLatest, takeEvery } from 'redux-saga/effects'
-import { ActionType, IAction, IGame, ILobby } from '../../typings'
+import { ActionType, IAction, IGame, ILobby } from '../../types'
 import API from '../../api/games'
 import Actions from '../actions/games'
 

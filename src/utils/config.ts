@@ -1,4 +1,4 @@
-import { IConfig } from '../typings'
+import { IConfig } from '../types'
 
 const cfg: IConfig = {
   ENDPOINT_URL: process.env.ENDPOINT_URL as string,

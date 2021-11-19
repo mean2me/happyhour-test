@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
-import { IGame, ILobby } from '../typings'
+import { IGame, ILobby } from '../types'
 import cfg from '../utils/config'
 
 namespace API {
