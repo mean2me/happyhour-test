@@ -1,12 +1,12 @@
 export enum ActionType {
   // gameGroupList,
-  GET_LOBBY_LIST_WITH_GAME_GROUPS_REQUEST,
-  GET_LOBBY_LIST_WITH_GAME_GROUPS_SUCCESS,
-  GET_LOBBY_LIST_WITH_GAME_GROUPS_FAILURE,
+  GET_LOBBY_LIST_WITH_GAME_GROUPS_REQUEST = 'GET_LOBBY_LIST_WITH_GAME_GROUPS_REQUEST',
+  GET_LOBBY_LIST_WITH_GAME_GROUPS_SUCCESS = 'GET_LOBBY_LIST_WITH_GAME_GROUPS_SUCCESS',
+  GET_LOBBY_LIST_WITH_GAME_GROUPS_FAILURE = 'GET_LOBBY_LIST_WITH_GAME_GROUPS_FAILURE',
   // gameGroupList,
-  GET_GAME_GROUP_LIST_REQUEST,
-  GET_GAME_GROUP_LIST_SUCCESS,
-  GET_GAME_GROUP_LIST_FAILURE,
+  GET_GAME_GROUP_LIST_REQUEST = 'GET_GAME_GROUP_LIST_REQUEST',
+  GET_GAME_GROUP_LIST_SUCCESS = 'GET_GAME_GROUP_LIST_SUCCESS',
+  GET_GAME_GROUP_LIST_FAILURE = 'GET_GAME_GROUP_LIST_FAILURE',
 }
 
 export declare interface IAction {
@@ -21,8 +21,8 @@ export declare interface IConfig {
 
 export declare interface IGamesState {
   loading: boolean
-  lobbies: Array<any>
-  games: Array<any>
+  lobbies: Array<ILobby>
+  games: Array<IGameGroup>
 }
 
 export declare interface IGameGroup {
@@ -103,4 +103,14 @@ export declare interface IGame {
   pristineGameId: string
   vendorSlug: string
   gameGroupList?: Array<IGameGroup>
+}
+
+export declare interface ILobbyDTO {
+  name: string
+  sortedGroups: Array<IGameGroup>
+}
+
+export declare interface IGameGroupDTO {
+  name: string
+  games: Array<IGame>
 }

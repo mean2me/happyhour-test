@@ -10,4 +10,6 @@ const store = createStore(gamesReducer, applyMiddleware(sagaMiddleware, logger))
 
 sagaMiddleware.run(Sagas.gamesSaga)
 
+export type RootState = ReturnType<typeof gamesReducer>
+
 export default store

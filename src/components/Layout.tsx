@@ -1,5 +1,6 @@
 import React, { ReactChild } from 'react'
 import '../styles/index.scss'
+import Slider from './Slider'
 
 const Layout = (): JSX.Element => {
   return (
@@ -12,7 +13,9 @@ const Layout = (): JSX.Element => {
           <div className="btn cta">JOIN</div>
         </div>
       </div>
-      <div className="body"></div>
+      <div className="body">
+        <Slider />
+      </div>
     </div>
   )
 }
