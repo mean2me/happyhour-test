@@ -6,7 +6,12 @@ import Sagas from './sagas/games'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const store = createStore(gamesReducer, applyMiddleware(sagaMiddleware, logger))
+const IS_PROD = process.env.NODE_ENV === 'production'
+
+const store = createStore(
+  gamesReducer,
+  applyMiddleware(...(IS_PROD ? [sagaMiddleware] : [sagaMiddleware, logger]))
+)
 
 sagaMiddleware.run(Sagas.gamesSaga)
 

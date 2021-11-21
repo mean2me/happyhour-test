@@ -22,7 +22,7 @@ export declare interface IConfig {
 export declare interface IGamesState {
   loading: boolean
   lobbies: Array<ILobby>
-  games: Array<IGameGroup>
+  games: Array<IGame>
 }
 
 export declare interface IGameGroup {
@@ -113,4 +113,10 @@ export declare interface ILobbyDTO {
 export declare interface IGameGroupDTO {
   name: string
   games: Array<IGame>
+}
+
+export enum ScreenSize {
+  MOBILE = 'MOBILE',
+  TABLET = 'TABLET',
+  DESKTOP = 'DESKTOP',
 }

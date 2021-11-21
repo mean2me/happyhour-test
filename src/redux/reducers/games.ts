@@ -14,6 +14,7 @@ export default (state = initialState, action: IAction): IGamesState => {
       break
     case ActionType.GET_GAME_GROUP_LIST_SUCCESS:
       state.loading = false
+      state.games = action.payload
       break
     case ActionType.GET_GAME_GROUP_LIST_FAILURE:
       state.loading = false
@@ -23,6 +24,7 @@ export default (state = initialState, action: IAction): IGamesState => {
       break
     case ActionType.GET_LOBBY_LIST_WITH_GAME_GROUPS_SUCCESS:
       state.loading = false
+      state.lobbies = action.payload
       break
     case ActionType.GET_LOBBY_LIST_WITH_GAME_GROUPS_FAILURE:
       state.loading = false

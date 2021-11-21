@@ -1,6 +1,6 @@
 import React, { ReactChild } from 'react'
 import '../styles/index.scss'
-import Slider from './Slider'
+import Lobby from './Lobby'
 
 const Layout = (): JSX.Element => {
   return (
@@ -14,7 +14,7 @@ const Layout = (): JSX.Element => {
         </div>
       </div>
       <div className="body">
-        <Slider />
+        <Lobby />
       </div>
     </div>
   )

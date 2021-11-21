@@ -4,7 +4,6 @@ import cfg from '../utils/config'
 
 namespace API {
   export const getLobbies = (): Promise<AxiosResponse<Array<ILobby>>> => {
-    console.log(`${cfg.ENDPOINT_URL}/ajax/game/getLobbyListWithGameGroups`)
     return axios.get<Array<ILobby>>(
       `${cfg.ENDPOINT_URL}/ajax/game/getLobbyListWithGameGroups`,
       {

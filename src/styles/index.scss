@@ -5,10 +5,15 @@
 @import 'swiper.scss';
 @import 'media-queries.scss';
 
+body {
+  min-width: 520px;
+}
+
 .main {
   display: flex;
   height: 100vh;
   min-height: 100vh;
+  min-width: 520px;
   margin: 0;
   overflow-y: auto;
   overflow-x: hidden;
@@ -45,6 +50,21 @@
     width: 100%;
     margin: 0;
   }
+  @media only screen and (max-width: 640px) {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    position: fixed;
+    box-sizing: border-box;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    height: 160px;
+    z-index: 9;
+  }
 }
 
 .body {
@@ -53,8 +73,46 @@
   background-color: $light-grey;
   box-sizing: border-box;
   padding: 2rem;
-  background-color: #ccc;
+  background-color: #fff;
   position: relative;
-  width: calc(100vw - 200px);
+  width: calc(100% - 200px);
   margin: 0 0 0 188px;
+  overflow: visible;
+  height: fit-content;
+
+  @media only screen and (max-width: 640px) {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 160px auto;
+  }
+
+  .lobby-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      text-transform: capitalize;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    .game-group {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: stretch;
+      margin: 3rem 0 1rem 0;
+      h2 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .slider {
+        display: block;
+      }
+    }
+  }
 }
