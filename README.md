@@ -42,5 +42,15 @@ cd happyhour-test
 
 npm i
 
+mkdir env
+
+touch env/.env
+
+# edit .env file as follows:
+ENDPOINT_URL=https://service.casinofriday.com
+LANG=en
+
+npm run build
+
 npx serve dist
 ```
